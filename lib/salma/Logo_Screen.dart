@@ -1,3 +1,4 @@
+import 'package:app_clean_arc/salma/Full_Screen.dart';
 import 'package:flutter/material.dart';
 
 import '../auth/Login_Screen.dart';
@@ -12,7 +13,7 @@ class _LogoScreenState extends State<LogoScreen> {
   void initState() {
    Future.delayed(Duration(seconds: 2),(){
      Navigator.pushReplacement(context, MaterialPageRoute(
-         builder: (context) => LoginScreen(),
+         builder: (context) => OnBoardingScreen(),
      ));
    });
     super.initState();
@@ -25,7 +26,7 @@ class _LogoScreenState extends State<LogoScreen> {
       ),
       body: Container(
        color: Color(0xff4FC070),
-        child: Image.asset('images/Login.jpeg',
+        child: Image.asset('assets/images/Login.jpeg',
         width: double.infinity,
         ),
       ),

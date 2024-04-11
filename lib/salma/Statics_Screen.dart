@@ -79,7 +79,7 @@ class _StaticsScreenState extends State<StaticsScreen> {
               SizedBox(height: 10.h,),
               Align(
                 alignment: Alignment.center,
-                  child: Image.asset("images/sta.jpg")),
+                  child: Image.asset("assets/images/sta.jpg")),
               SizedBox(height: 10.h,),
               Text(
                 'Device Power',

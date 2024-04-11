@@ -1,4 +1,8 @@
+import 'package:app_clean_arc/components.dart';
+import 'package:app_clean_arc/dashboard.dart';
 import 'package:flutter/material.dart';
+
+import '../salma/Dashboard_Screen.dart';
 
 class SignUpScreen extends StatelessWidget {
 
@@ -17,7 +21,7 @@ class SignUpScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset('images/logog-01.png',
+              Image.asset('assets/images/logog-01.png',
                 width: 100.0,
               ),
               SizedBox(
@@ -189,12 +193,7 @@ class SignUpScreen extends StatelessWidget {
                      ),
                      MaterialButton(
                        onPressed: (){
-                         Navigator.push(context,
-                           MaterialPageRoute(
-                             builder: (context) =>SignUpScreen(
-                             ),
-                           ),
-                         );
+                       navigateTo(context, DashboardScreen());
                        },
                        child: Text('Sign Up',
                          style: TextStyle(

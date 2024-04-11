@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-              Image.asset('images/logog-01.png',
+              Image.asset('assets/images/logog-01.png',
                 width: 100.0,
               ),
                 Padding(
