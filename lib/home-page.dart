@@ -19,8 +19,8 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            // Handle back arrow press
-          },
+            Navigator.pop(context);
+           },
         ),
         title: Text(
           'Living Room',

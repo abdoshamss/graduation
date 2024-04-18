@@ -1,3 +1,4 @@
+import 'package:app_clean_arc/layout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -113,11 +114,10 @@ class LoginScreen extends StatelessWidget {
         
                   child: MaterialButton(
                     onPressed: (){
-                      print(emailController.text);
-                      print(passwordController.text);
+                    
                       Navigator.push(context,
                         MaterialPageRoute(
-                          builder: (context) =>DashboardScreen(
+                          builder: (context) =>LayoutScreen(
                           ),
                         ),
                       );

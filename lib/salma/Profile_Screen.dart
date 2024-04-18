@@ -1,4 +1,6 @@
+import 'package:app_clean_arc/components.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -103,8 +105,11 @@ class ProfileScreen extends StatelessWidget {
                     SizedBox(
                       height: 10.0.h,
                     ),
-                    Text(
-                        'Edit Profile'
+                    GestureDetector(
+                      onTap: (() => navigateTo(context, EditProfileScreen())),
+                      child: Text(
+                          'Edit Profile'
+                      ),
                     ),
                     SizedBox(
                       height: 10.0.h,

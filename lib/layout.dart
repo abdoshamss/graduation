@@ -1,5 +1,11 @@
+import 'package:app_clean_arc/components.dart';
+import 'package:app_clean_arc/dashboard.dart';
 import 'package:app_clean_arc/room-propertey.dart';
 import 'package:app_clean_arc/rooms.dart';
+import 'package:app_clean_arc/salma/Dashboard_Screen.dart';
+import 'package:app_clean_arc/salma/Device_Add.dart';
+import 'package:app_clean_arc/salma/Profile_Screen.dart';
+import 'package:app_clean_arc/salma/Statics_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,10 +56,10 @@ class LayoutScreen extends StatefulWidget {
 
 class _LayoutScreenState extends State<LayoutScreen> {
   List<Widget> screens = [
+    DashboardScreen(),
     RoomPage(),
-    RoomProperty(),
-    Notifications(),
-    HomePage(),
+    StaticsScreen(),
+    ProfileScreen(),
   ];
   int currentIndex = 0;
   var scaffoldKey = GlobalKey<ScaffoldState>();
@@ -166,6 +172,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                                       ],
                                     ),
                                   ),
+                                  onTap: (() => navigateTo(context,AddDevice())),
                                 ),
                                 GestureDetector(
                                   child: Container(
@@ -181,6 +188,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
                                       ],
                                     ),
                                   ),
+                                  onTap: (() => navigateTo(context, RoomPage())),
                                 ),
                                 GestureDetector(
                                   child: Container(

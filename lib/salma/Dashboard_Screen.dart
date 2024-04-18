@@ -1,3 +1,5 @@
+import 'package:app_clean_arc/components.dart';
+import 'package:app_clean_arc/notification-page.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,8 +26,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.notifications_none_outlined
+        leading:  IconButton(
+         icon: Icon(Icons.notifications_none_outlined),
+         onPressed: (){
+          navigateTo(context, Notifications());
+         },
         ),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,

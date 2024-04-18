@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:qr_bar_code_scanner_dialog/qr_bar_code_scanner_dialog.dart';
 
-class DashBoard extends StatefulWidget {
-  DashBoard(this.roomKind);
- final String roomKind;
+class AddDevice extends StatefulWidget {
+//   AddDevice(this.roomKind);
+//  final String roomKind;
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<AddDevice> createState() => _AddDeviceState();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _AddDeviceState extends State<AddDevice> {
   final _qrBarCodeScannerDialogPlugin = QrBarCodeScannerDialog();
   ScrollController controller = ScrollController();
   int _selectedIndex = -1;
@@ -228,7 +228,7 @@ class _DashBoardState extends State<DashBoard> {
                         SizedBox(
                           height: 20.h,
                         ),
-                        Text(widget.roomKind,style: TextStyle(
+                        Text('Bed Room',style: TextStyle(
                           fontSize: 24.sp,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
@@ -261,7 +261,7 @@ class _DashBoardState extends State<DashBoard> {
               margin: EdgeInsets.only(
                 top: 12.h
               ),
-              height: 68.5.h,
+              height: 63.5.h,
               width: double.infinity,
               decoration: BoxDecoration(
                color: HexColor('#f3f3f3'),

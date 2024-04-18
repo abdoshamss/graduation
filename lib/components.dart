@@ -1,4 +1,5 @@
-import 'package:app_clean_arc/dashboard.dart';
+import 'package:app_clean_arc/home-page.dart';
+import 'package:app_clean_arc/room-propertey.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -204,7 +205,7 @@ Widget room({
       ),
     ),
     onTap: (){
-      navigateTo(context,DashBoard(title));
+      navigateTo(context,RoomProperty());
     },
   );
 }
@@ -323,47 +324,53 @@ Widget roomPrototypeItem({
   required ValueChanged onChange,
   required Color statusColor,
   required Color titleColor,
+  required BuildContext context,
 }){
-  return Container(
-    padding: EdgeInsets.all(10.h),
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(8.dm),
-    color: bgColor,
-  ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Image.asset(image),
-            const Spacer(),
-            Switch(
-              value: switched,
-              activeColor: bgColor.withOpacity(0.5),
-              inactiveThumbColor: bgColor.withOpacity(0.5),
-              activeTrackColor: Colors.grey[400],
-              // Set the color of the switch button in the inactive state
-              onChanged: onChange,
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 30.h,
-        ),
-        Text(title,style: GoogleFonts.poppins(
-          fontWeight: FontWeight.w600,
-          fontSize: 16.sp,
-          color: titleColor
-        ),),
-        SizedBox(
-          height: 5.h,
-        ),
-        Text(status,style: GoogleFonts.poppins(
-            fontWeight: FontWeight.w500,
-            fontSize: 14.sp,
-            color: statusColor
-        ),),
-      ],
+  return GestureDetector(
+    onTap: (){
+      navigateTo(context, HomePage());
+    },
+    child: Container(
+      padding: EdgeInsets.all(10.h),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8.dm),
+      color: bgColor,
+    ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Image.asset(image),
+              const Spacer(),
+              Switch(
+                value: switched,
+                activeColor: bgColor.withOpacity(0.5),
+                inactiveThumbColor: bgColor.withOpacity(0.5),
+                activeTrackColor: Colors.grey[400],
+                // Set the color of the switch button in the inactive state
+                onChanged: onChange,
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 30.h,
+          ),
+          Text(title,style: GoogleFonts.poppins(
+            fontWeight: FontWeight.w600,
+            fontSize: 16.sp,
+            color: titleColor
+          ),),
+          SizedBox(
+            height: 5.h,
+          ),
+          Text(status,style: GoogleFonts.poppins(
+              fontWeight: FontWeight.w500,
+              fontSize: 14.sp,
+              color: statusColor
+          ),),
+        ],
+      ),
     ),
   );
 }

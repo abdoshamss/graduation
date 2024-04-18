@@ -1,5 +1,6 @@
 import 'package:app_clean_arc/components.dart';
 import 'package:app_clean_arc/dashboard.dart';
+import 'package:app_clean_arc/layout.dart';
 import 'package:flutter/material.dart';
 
 import '../salma/Dashboard_Screen.dart';
@@ -122,10 +123,7 @@ class SignUpScreen extends StatelessWidget {
           
                 child: MaterialButton(
                   onPressed: (){
-                    print(emailController.text);
-                    print(passwordController.text);
-                    print(phoneController.text);
-                    print(confirmpasswordController.text);
+                  navigateTo(context, LayoutScreen());
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -193,7 +191,7 @@ class SignUpScreen extends StatelessWidget {
                      ),
                      MaterialButton(
                        onPressed: (){
-                       navigateTo(context, DashboardScreen());
+                       navigateTo(context, LayoutScreen());
                        },
                        child: Text('Sign Up',
                          style: TextStyle(

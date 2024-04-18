@@ -1,7 +1,6 @@
 import 'package:app_clean_arc/components.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class RoomPage extends StatelessWidget {
@@ -52,7 +51,7 @@ class RoomPage extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            // Handle back arrow press
+            Navigator.pop(context);
           },
         ),
         title:  Text('Rooms',

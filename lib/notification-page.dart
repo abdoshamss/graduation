@@ -27,7 +27,9 @@ class _NotificationsState extends State<Notifications> {
             padding: const EdgeInsets.only(left: 30.0),
             child: IconButton(
               icon: const Icon(Icons.arrow_back_ios),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
             ),
           ),
           title: Text(

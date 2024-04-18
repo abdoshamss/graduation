@@ -66,7 +66,9 @@ class _RoomPropertyState extends State<RoomProperty> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Column(
           children: [
@@ -102,6 +104,7 @@ class _RoomPropertyState extends State<RoomProperty> {
               children: List.generate(
                   objs.length,
                   (index) => roomPrototypeItem(
+                    context: context,
                       bgColor: objs[index]['bkColor'],
                       image: objs[index]['image'],
                       switched: objs[index]['switched'],

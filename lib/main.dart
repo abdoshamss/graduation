@@ -1,3 +1,4 @@
+import 'package:app_clean_arc/auth/Login_Screen.dart';
 import 'package:app_clean_arc/salma/Dashboard_Screen.dart';
 import 'package:app_clean_arc/salma/Full_Screen.dart';
 import 'package:app_clean_arc/salma/Logo_Screen.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
             )
           )
         ),
-        home: DashboardScreen(),
+        home: LogoScreen(),
       ),
     );
   }
